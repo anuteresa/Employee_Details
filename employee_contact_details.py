@@ -1,5 +1,16 @@
 from tkinter import*
 window= Tk()
+
+def add():
+    employee_backend.insert(first_name.get(),last_name.get(),employee_id.get(),phone_no.get(),department_name.get())
+    list1.delete(0,END)
+    list1.insert(END,(first_name.get(),last_name.get(),employee_id.get(),phone_no.get(),department_name()))
+
+def view_all():
+    list1.delete(0,END)
+    for row in employee_backend.view():
+        list1.insert(END,row)
+     
 # Label formation
 a1=Label(window,text="Contact List")
 a1.grid(row=0, column=0,columnspan=2)
@@ -51,9 +62,9 @@ list1.grid(row=1, column=0,rowspan=4,columnspan=2)
 
 
 #Button formation
-d1=Button(window,text="Add Contact",width=10)
+d1=Button(window,text="Add Contact",width=10,command=add)
 d1.grid(row=6,column=4)
-d2=Button(window,text="Search ",width=10)
+d2=Button(window,text="Search ",width=10,command=view_all)
 d2.grid(row=12,column=1)
 d3=Button(window,text="Display",width=10)
 d3.grid(row=4, column=0,rowspan=4,columnspan=2)
