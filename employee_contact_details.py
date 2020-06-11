@@ -38,12 +38,12 @@ e4=Entry(window,textvariable=phone_no)
 e4.grid(row=4,column=4)
 
 department_name=StringVar()
-e4=Entry(window,textvariable=department_name)
-e4.grid(row=5,column=4)
+e5=Entry(window,textvariable=department_name)
+e5.grid(row=5,column=4)
 
 search_value=StringVar()
-e4=Entry(window,textvariable=search_value)
-e4.grid(row=10,column=1)
+e6=Entry(window,textvariable=search_value)
+e6.grid(row=10,column=1)
 
  # listbox formation
 list1=Listbox(window,height=6,width=20)
