@@ -5,7 +5,7 @@ window= Tk()
 def add():
     employee_backend.insert(first_name.get(),last_name.get(),employee_id.get(),phone_no.get(),department_name.get())
     list1.delete(0,END)
-    list1.insert(END,(first_name.get(),last_name.get(),employee_id.get(),phone_no.get(),department_name()))
+    list1.insert(END,(first_name.get(),last_name.get(),employee_id.get(),phone_no.get(),department_name.get()))
 
 def view_all():
     list1.delete(0,END)
